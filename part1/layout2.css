@@ -2,7 +2,7 @@ body{
     margin : 0px;
 }
 
-.div{
+div, input, textarea{
     box-sizing: border-box;
 }
 
@@ -60,19 +60,71 @@ body{
 }
 
 .explain-box {
-    position : absolute;
+    position : relative;
     background-color: #eee;
     padding : 30px;
-    left : 0;
-    right : 0;
     margin : auto;
-    bottom : -150px;
+    bottom : -200px;
     width : 80%; 
     max-width: 600px; 
-    
-/*    화면 폭에 비례하여 80%*/
+    /*    화면 폭에 비례하여 80%*/
 }
 
 .grey-box h3{
     text-align: center;
+}
+
+.form-container {
+    position: relative;
+    top : 200px;
+    padding : 60px 70px 60px 70px;
+    background-color: dimgrey;
+}
+
+
+.form-inner {
+    margin : auto; 
+    background-color: white;
+    padding : 50px;
+    position: relative;
+    max-width: 864px;
+    min-width: 864px;
+}
+
+.form-all {
+    width : 100%;
+}
+
+.form-all input[type=email]{
+    width : 100%;
+    padding : 20px; 
+}
+
+.form-all textarea {
+    width : 100%;
+    height : 300px;
+    padding : 20px;
+}
+
+.form-half {
+    width : 45%;
+    float : left;
+}
+
+.form-half input{
+    width : 100%;
+    padding : 20px;
+}
+
+.btn-position {
+    position : absolute;
+    right : 50px;
+    bottom : 20px;
+}
+
+.btn-style {
+    padding : 10px 40px 10px 40px; 
+    background-color: darkorange;
+    color : white;
+    font-size: 20px;
 }
