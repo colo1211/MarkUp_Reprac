@@ -1,0 +1,26 @@
+
+.main-background {
+    width : 100%; 
+    height : 500px; 
+    background-image : url('../이미지파일/shoes.jpg'); 
+    /* 배경 이미지는 꽉차지 않는다면 반복되는 특성을 가지고 있다. */
+    background-repeat: no-repeat;
+    background-size : cover;
+    /* 배경이 잘려도 상관없으니 빈공간 없이 배경으로 꽉 채우라는 속성 <-> 반대 : contain*/
+    background-position: center; 
+    /* 창을 늘리거나 키울 때, 사진이 어디서 부터 채워지는지 정해주는 속성, 기본은 left(왼쪽부터 채워진다)*/
+    
+/*    filter : brightness(200%);*/
+    /* 인스타 사진 필터 넣듯이 사용하는 기술, IE에서는 안먹힘, 안에 글씨가 있다면 글씨에도 필터가 먹히기 때문에 조심히 사용 할 것 */
+/*    background-attachment : fixed;*/
+    padding : 1px; 
+/*    margin collapse를 안먹게 띄워준다. */
+}
+
+.main-title {
+    color : white; 
+    font-size : 40px;
+    text-align: center;
+    margin-top : 100px;
+    /* margin-collapse 현상이 나타난다. */
+}
