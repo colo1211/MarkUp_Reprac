@@ -59,3 +59,11 @@ Tip! position : absolute 가운데 정렬하는 방법
     margin : auto;
     width : 적절한 px;
 ```
+
+### z-index
+
+* position 을 쓰게 되면 붕 뜬다. 여러 개가 겹쳤을 때, 사용 할 수 있는 속성
+* 여러 개가 동시에 붕 띄웠을 때, 어떤 것을 더 위에 보여줄 것인가? 
+
+* z-index (5) 가 높을수록 앞에 온다. 
+* z-index (1) 가 낮을수록 뒤에 온다.
