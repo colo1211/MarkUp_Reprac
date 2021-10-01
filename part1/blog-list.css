@@ -1,0 +1,49 @@
+
+div {
+    box-sizing: border-box;
+}
+
+.left {
+    width : 80%;
+    float : left;
+    padding : 30px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width : 800px;
+    padding : 30px;
+}
+
+.right {
+    width : 20%; 
+    float : left;
+}
+
+.profile-photo { 
+    width : 50px; 
+    height : 50px; 
+    margin-top: 20px;
+}
+
+.img-wrap {
+    padding-top: 30px;
+}
+
+.footer {
+    padding : 30px;
+}
+
+.profile {
+    
+}
+
+.profile-user {
+    float : left; 
+    margin-left: 10px;
+}
+
+.profile-photo-wrap {
+    float : left; 
+}
