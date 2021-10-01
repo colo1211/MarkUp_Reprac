@@ -2,6 +2,10 @@ body{
     margin : 0px;
 }
 
+.div{
+    box-sizing: border-box;
+}
+
 .main-background {
     width : 100%; 
     height : 500px; 
@@ -55,7 +59,7 @@ body{
     width : 150px;
 }
 
-.grey-box {
+.explain-box {
     position : absolute;
     background-color: #eee;
     padding : 30px;
@@ -63,7 +67,10 @@ body{
     right : 0;
     margin : auto;
     bottom : -150px;
-    width : 500px;
+    width : 80%; 
+    max-width: 600px; 
+    
+/*    화면 폭에 비례하여 80%*/
 }
 
 .grey-box h3{
