@@ -6,6 +6,17 @@
         <meta charset="utf-8">
     </head>
     <body>
+       
+<!--       div 이던 nav이던 기능은 동일함. 의미를 부여하는 기능 뿐-->
+       <nav class ='nav-bar'>
+           <ul class='nav-list'>
+               <li><a href='#'>영화</a></li>
+               <li><a href='#'>맛집</a></li>
+               <li><a href='#'>IT</a></li>
+               <li><a href='#'>컴퓨터</a></li>
+           </ul>
+       </nav>
+       
         <div class='container'>
             <div class='left'>
                 <div class='profile'>
@@ -13,11 +24,12 @@
                     <img class='profile-photo' src='../이미지파일/lion.png'>
                     </div>
                     <div class='profile-user'>
-                        <p>김경원</p>
-                        <p>1시간 전</p>
+                        <!-- p태그는 기본 margin이 존재하여 이를 없애주면 된다. -->
+                        <p style="margin : 5px">김경원</p>
+                        <p style="margin : 5px">1시간 전</p>
                     </div>
-                    <div style='clear: both'></div>
                 </div>
+                <div style='clear: both;'></div>
                 <div>
                     <h2>Front-End-Dev</h2>
                     <p>6월부터 9월까지 약 4개월간 프론트엔드 개발에 대한 전반적인 학습을 마치고 프로젝트에 투입되기 전 마지막으로 MarkUp에 대해서 공부해보기 위한 학습물입니다. HTML/CSS/JS/JQuery/React/Redux 를 학습하였고 이제 프로젝트를 통해 협업 능력을 길러보겠습니다. </p>

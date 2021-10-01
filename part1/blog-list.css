@@ -41,9 +41,38 @@ div {
 
 .profile-user {
     float : left; 
-    margin-left: 10px;
+    margin-left: 20px;
+    padding-top : 15px;
 }
 
 .profile-photo-wrap {
     float : left; 
 }
+
+/*CSS Selector
+1. A > B (비추천)
+: A안에 있는 직계자식 B
+2. A 공백 B (추천)
+: A안에 있는 모든 자식 B 
+*/
+.nav-list li{
+    display: inline-block;
+    width : 60px; 
+    text-align: center;
+    background-color: #eee; 
+    padding : 10px; 
+    border-radius: 10px; 
+}
+
+.nav-list a{
+    font-size : 20px;
+    text-decoration: none; /* 밑줄 제거 : text-decoration : none */ 
+    color : black;
+    cursor: pointer; 
+}
+
+
+
+
+
+
