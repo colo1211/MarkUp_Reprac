@@ -10,6 +10,7 @@
 4. 이후 `float : left` (왼쪽 정렬) , 붕 띄워서 왼쪽에 정렬해준다.  
 5. 붕 띄웠기 때문에 아래에 footer는 header의 바로 아래에 배치된다. 따라서 left, right 아래에 배치되게 하기 위해서는 `clear : both` 를 사용한 이후에 해주어야 제대로 배치된다. 
 
+---
 ### 2. display : inline-block 
 
 * 우선 이 방법은 비추
@@ -59,3 +60,122 @@
 ```
 
 ![image](https://user-images.githubusercontent.com/63600953/135572966-86fb85f2-85fc-4db5-ae5b-7ef18d48f05b.png)
+
+---
+### 3. display : flex
+
+`display : flex` 를 쓰면 Box 가로 배치가 쉬워진다. 
+
+* 기본 셋팅
+```
+<div class='flex-container'>
+   <div class='flex-box'></div>
+   <div class='flex-box'></div>
+   <div class='flex-box'></div>
+</div>
+```
+
+![image](https://user-images.githubusercontent.com/63600953/135708349-2c941781-79ff-4019-922f-c1be5f964594.png)
+
+* 웹 상에서 보이는 구조 (세로로 정렬 되어 보인다)
+
+![image](https://user-images.githubusercontent.com/63600953/135708390-cfa7f0be-968d-4ea8-b906-81a517f8591c.png)
+
+이를 가로로 배치하기 위해서는? 
+```
+.flex-container {
+    display: flex;
+}
+```
+
+![image](https://user-images.githubusercontent.com/63600953/135708429-4fb7349d-ad43-45ad-b5e8-c3a1edcf345d.png)
+
+
+> flex-container와 flex-box에 들어가는 CSS값이 각기 다르다. 
+
+
+#### flex-container에 적용되는 속성
+```
+▶ display : flex;
+
+: box의 형태를 flex형태로 설정한다. flex를 활용한 레이아웃을 하기 위해서 가장 먼저 사용되어야 합니다.
+
+★ display : flex; = table 특성(best-effort, 노력형) + inline-block 특성
+
+
+
+▶ justify-contents (왼쪽-오른쪽) 
+
+* justify : 가로줄
+
+: 수평 정렬(왼쪽, 중앙, 오른쪽) 을 나타냅니다.
+
+속성 값으로는 flex-start (왼쪽 정렬), center (중앙 정렬), flex-end (오른쪽 정렬) 등이 있습니다.
+
+
+
+▶ align-items (위-아래):
+
+* align : 일직선
+
+: 수직 정렬(위, 중앙, 아래) 를 나타냅니다.
+
+속성 값으로는 flex-start (위 정렬), center (중앙 정렬), flex-end (아래 정렬) 등이 있습니다.
+
+
+
+▶ flex-direction :
+
+: flex-box들의 배치(정렬 배치 순서)를 설정합니다.
+
+1. column(기본 값) : 세로
+
+2. row : 가로
+
+3. column-reverse : 세로 거꾸로
+
+4. row-reverse : 가로 거꾸로
+
+
+
+▶ flex-wrap 
+: flex-box들을 브라우저 창이 늘어나고 줄어듦에 따라서 box의 반응을 어떻게 설정 할 것인지?
+
+1.  nowrap (기본 값)
+: 브라우저 창이 줄어들어도 box들이 사이즈를 줄이면서 칸을 유지
+
+2. wrap
+: box의 size를 살리고 box들을 줄을 바꿔서 배치
+
+▶ flex-flow
+: flex-direction 과 flex-wrap을 한번에 사용할 수 있게 해주는 값
+```
+
+#### flex-box에 적용되는 속성
+
+▶ flex-grow
+: flex-box들에 주어진 값들에게 상대적인 비율을 준다고 생각하면 이해가 빠릅니다.
+
+```
+ <div class='flex-wrap'>
+           <div class='flex-box' style='flex-grow:1'></div>
+           <div class='flex-box' style='flex-grow:2'></div>
+           <div class='flex-box' style='flex-grow:3'></div>
+       </div>
+```
+
+![image](https://user-images.githubusercontent.com/63600953/135708564-1af15146-beed-4a5b-a969-e9442df15a36.png)
+
+* flex-grow 실전
+`=> 박스와 박스 사이를 떨어뜨리고 싶을 때`
+  
+```
+<div class='flex-wrap'>
+       <div class='flex-box'></div>
+       <div style='flex-grow:1'></div>
+       <div class='flex-box'></div>
+       <div class='flex-box'></div>
+</div>
+```
+
+![image](https://user-images.githubusercontent.com/63600953/135708593-0350dcbf-3fb3-4e6a-9c4e-812588887449.png)
