@@ -2,7 +2,7 @@ body{
     margin : 0px;
 }
 
-div, input, textarea{
+div, input, textarea, button{
     box-sizing: border-box;
 }
 
@@ -85,14 +85,16 @@ div, input, textarea{
 .form-inner {
     margin : auto; 
     background-color: white;
-    padding : 50px;
+    padding : 100px 50px 100px 50px;
     position: relative;
+    width : 80%;
     max-width: 864px;
     min-width: 864px;
 }
 
 .form-all {
     width : 100%;
+    padding : 10px;
 }
 
 .form-all input[type=email]{
@@ -107,8 +109,9 @@ div, input, textarea{
 }
 
 .form-half {
-    width : 45%;
+    width : 50%;
     float : left;
+    padding : 10px;
 }
 
 .form-half input{
@@ -117,9 +120,8 @@ div, input, textarea{
 }
 
 .btn-position {
-    position : absolute;
-    right : 50px;
-    bottom : 20px;
+    position : absolute; 
+    right : 10px;
 }
 
 .btn-style {
@@ -127,4 +129,9 @@ div, input, textarea{
     background-color: darkorange;
     color : white;
     font-size: 20px;
+}
+
+.checkbox {
+    position : relative; 
+    padding : 10px;
 }
