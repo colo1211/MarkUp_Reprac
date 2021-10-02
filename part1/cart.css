@@ -1,0 +1,83 @@
+body {
+    margin : 0px;
+}
+
+div{
+    box-sizing: border-box;
+}
+.table-container {
+    padding : 40px;
+    background-color: rgba(76, 102, 209, 0.6);
+}
+
+.table-main {
+    width : 100%;
+    background-color: white;
+    border-radius: 5px;
+    border-collapse: collapse; /* border-collapse : collapse를 안해주면 border : 1px solid black 안먹힘*/
+    font-size : 20px;
+}
+
+
+
+td {
+    padding: 10px;
+}
+
+tr {
+    border: 1px solid rgba(76, 102, 209, 0.6);
+}
+
+th {
+    padding : 10px;
+}
+
+.bottom-area {
+    width: 100%;
+    margin-top : 30px;
+    margin-bottom : 90px;
+    position : relative;
+}
+
+.btn-style {
+    padding : 20px 30px 20px 30px;
+    background-color: darkblue;
+    color : white; 
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* hfa(암기 팁: hofa.....)순서로 써줘야 함. -> pseudo class*/
+.btn-style:hover{
+    background-color: cadetblue;
+}
+
+/*누르고 난 이후, 손가락 뗀 후*/
+.btn-style:focus{
+    background-color: dodgerblue;
+}
+
+/*누르는 중, 손가락 떼기 전*/
+.btn-style:active{
+    background-color: aqua;
+}
+
+.btn-layout {
+     position : absolute;
+     right : 0px;    
+}
+
+.custom-link {
+    text-decoration: none;
+}
+
+/*방문 전*/
+.custom-link : link {
+    color : black;
+}
+
+/*방문 후*/
+.custom-link : visited{
+    color : black; 
+}
