@@ -87,3 +87,49 @@ input대신 label을 눌러도 input을 선택할 수 있다.
 }
 
 ```
+
+### class 제작 요령
+
+#### OOCSS (Objected Oriented CSS)
+* 뼈대용 class, 살점용 class를 각각 제작
+  ![image](https://user-images.githubusercontent.com/63600953/135705883-d5719819-3d19-4963-9aa9-e381f213fdbd.png)
+
+html
+```
+<button class='btn btn-red'>더 알아보기</button>
+<button class='btn btn-blue'>구매하기</button>
+```
+
+css
+```
+/* 뼈대 */
+.main-btn{
+    padding : 15px; 
+    font-size : 20px; 
+    border : none;
+    cursor : focus; 
+}
+
+
+/* 살점 */
+.btn-red{
+    background-color : red;
+}
+
+/* 살점 */
+.btn-blue{
+    background-color : blue; 
+}
+```
+
+#### BEM Role (Block__Element--Modifier)
+* class 작명할 때 창의력이 딸리면 `BEM룰`을 따라라. 
+
+```
+class = "덩어리이름__역할--세부특징"
+```
+
+![image](https://user-images.githubusercontent.com/63600953/135705994-27905339-12dc-4d5b-be20-32f81dd3db8b.png)
+
+
+요즘은, React/Vue 를 사용하여 컴포넌트별로 CSS를 작성하기 때문에 OOCSS, BEM을 사용하지 않아도 괜찮음. 
