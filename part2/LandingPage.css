@@ -1,0 +1,137 @@
+body{
+    margin : 0px;
+}
+
+div, input, textarea, button{
+    box-sizing: border-box;
+}
+
+.main-background {
+    width : 100%; 
+    height : 500px; 
+    background-image : url('../이미지파일/shoes.jpg'); 
+    /* 배경 이미지는 꽉차지 않는다면 반복되는 특성을 가지고 있다. */
+    background-repeat: no-repeat;
+    background-size : cover;
+    /* 배경이 잘려도 상관없으니 빈공간 없이 배경으로 꽉 채우라는 속성 <-> 반대 : contain*/
+    background-position: center; 
+    /* 창을 늘리거나 키울 때, 사진이 어디서 부터 채워지는지 정해주는 속성, 기본은 left(왼쪽부터 채워진다)*/
+    
+/*    filter : brightness(200%);*/
+    /* 인스타 사진 필터 넣듯이 사용하는 기술, IE에서는 안먹힘, 안에 글씨가 있다면 글씨에도 필터가 먹히기 때문에 조심히 사용 할 것 */
+    background-attachment : fixed;
+    padding : 1px; 
+/*    margin collapse를 안먹게 띄워준다. */
+    position : relative; 
+}
+
+.main-title {
+    color : white; 
+    font-size : 40px;
+    text-align: center;
+    margin-top : 100px;
+    /* margin-collapse 현상이 나타난다. */
+}
+
+.intro {
+    text-align: center;
+    color : white; 
+}
+
+/*class명 중복을 피하려면 접두어 활용*/
+.main-btn {
+    
+    font-size : 20px;
+    padding : 15px;
+    background-color: white;
+    border : none; 
+    border-radius: 10px;
+    color : black;
+    display: block;
+    margin: auto;
+    margin-top: 100px;
+    cursor: pointer;
+    position: absolute;
+    left : 0;
+    right : 0;
+    bottom : 100px;
+    margin : auto;
+    width : 150px;
+}
+
+.explain-box {
+    position : relative;
+    background-color: #eee;
+    padding : 30px;
+    margin : auto;
+    bottom : 50px;
+    width : 80%; 
+    max-width: 600px; 
+    /*화면 폭에 비례하여 80%*/
+}
+
+.grey-box h3{
+    text-align: center;
+}
+
+.form-container {
+    padding : 60px 70px 60px 70px;
+    background-color: dimgrey;
+}
+
+
+.form-inner {
+    margin : auto; 
+    background-color: white;
+    padding : 100px 50px 100px 50px;
+    position: relative;
+    width : 80%;
+    max-width: 864px;
+    min-width: 864px;
+}
+
+.form-all {
+    width : 100%;
+    padding : 10px;
+}
+
+.form-all input[type=email]{
+    width : 100%;
+    padding : 20px; 
+}
+
+.form-all textarea {
+    width : 100%;
+    height : 300px;
+    padding : 20px;
+}
+
+.form-half {
+    width : 50%;
+    float : left;
+    padding : 10px;
+}
+
+.form-half input{
+    width : 100%;
+    padding : 20px;
+}
+
+.btn-position {
+    position : absolute; 
+    right : 10px;
+}
+
+.btn-style {
+    padding : 10px 40px 10px 40px; 
+    background-color: darkorange;
+    color : white;
+    font-size: 20px;
+}
+
+.checkbox {
+    position : relative; 
+    padding : 10px;
+}
+
+
