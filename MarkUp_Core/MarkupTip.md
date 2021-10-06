@@ -133,3 +133,11 @@ class = "덩어리이름__역할--세부특징"
 
 
 요즘은, React/Vue 를 사용하여 컴포넌트별로 CSS를 작성하기 때문에 OOCSS, BEM을 사용하지 않아도 괜찮음. 
+
+# CSS 덮어쓰기
+급할때 `!important`
+```
+.custom {
+  color : green !important; 
+}
+```
