@@ -1,0 +1,100 @@
+body {
+    margin : 0px;
+    font-family: 'Gowun Dodum', sans-serif;
+}
+
+div{
+    box-sizing: border-box;    
+}
+
+
+.profile-photo img{
+    width : 150px;
+    display: block;
+    margin: auto;
+    border-radius: 100%;
+    border : 1px solid #eee;
+}
+
+
+
+.profile-info {
+    background-color: white;
+}
+
+.profile-box {
+    border-right : 2px solid #eee;
+}
+
+.profile-box i{
+    color : #00a0d6;
+}
+
+
+.main-intro-tab-wrap {
+    border-bottom: 3px solid #eee;
+}
+
+.main-intro-tab-light {
+    width : 20%;
+    text-align: center;
+    border-bottom : 3px solid skyblue;
+    color : skyblue;
+    margin-bottom: -3px;
+}
+
+.main-intro-works {
+    background-color: white;
+    padding : 30px; 
+}
+
+.main-intro-about {
+    background-color: white;
+    padding : 30px;
+}
+
+.horizontal-line {
+    width : 100%; 
+    padding : 1px;
+    background-color: #eee;
+}
+
+.skill-btn {
+    display: inline-block;
+    background-color: white;
+    border : 2px solid #eee;
+    border-radius: 30px;
+    padding : 2.5px 10px 2.5px 10px; 
+    margin : 5px 0px 5px 0px; 
+    font-weight: 400;
+}
+
+
+
+.signUp {
+    width : 100%; 
+    background-color: white;
+    padding : 30px;
+}
+
+.signUp i{
+    color : #00a0d6;
+}
+
+
+
+.friend-profile {
+    width : 100%;
+}
+
+.friend-profile img{
+    width : 30%;
+    display: inline-block;
+    border-radius: 30px;
+}
+
+@media screen and (max-width : 768px){
+    .profile-box{
+        border-right : none;
+    }
+}
