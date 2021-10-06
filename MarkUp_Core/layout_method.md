@@ -179,3 +179,59 @@
 ```
 
 ![image](https://user-images.githubusercontent.com/63600953/135708593-0350dcbf-3fb3-4e6a-9c4e-812588887449.png)
+
+---
+
+### 4. bootstrap grid Layout
+
+![image](https://user-images.githubusercontent.com/63600953/136166435-865c7b6b-d739-49ab-a8e5-8bd54dc27b23.png)
+
+* row : 내부를 12칸으로 쪼개주는 class 명  
+* col : col-차지할 크기 (모두 합쳐서 12여야 한다.)
+```
+<div class='container'>
+    <div class="row">
+        <div class="col-4 text-center">안녕하세요</div>
+        <div class="col-4 text-center">안녕하세요</div>
+        <div class="col-4 text-center">안녕하세요</div>
+    </div>
+</div>
+```
+
+⭐ Bootstrap 에서 제공하는 반응형 레이아웃 (클래스에 조건을 달아주면 된다)
+* md(768px) Size 이상에서는 md-6 (동등하게 2칸)
+* md Size 이하에서는 세로 정렬
+* md Size 이하에서는 없는셈 친다고 생각하면 편함
+```
+<div class='container'>
+    <div class="row">
+        <div class="col-md-6 text-center">안녕하세요</div>
+        <div class="col-md-6 text-center">안녕하세요</div>
+    </div>
+</div>
+```
+
+#### Grid System
+![image](https://user-images.githubusercontent.com/63600953/136167108-f2db5a46-cb8f-4cc5-bce4-44dbbc694606.png)
+
+* sm : 576px
+* md : 768px 
+* lg : 992px
+* xl : 1200px
+
+
+#### 순서 재배치
+
+* order-first
+
+![image](https://user-images.githubusercontent.com/63600953/136167832-630a441f-6649-4031-8791-97eacb00e51c.png)
+
+```
+<div class='container'>
+    <div class="row">
+        <div class="col-md-6 text-center">안녕하세요1</div>
+        <div class="col-md-6 text-center order-first">안녕하세요2</div>
+    </div>
+</div>
+```
+
