@@ -1,6 +1,7 @@
 body{
     margin : 0px; 
     font-family: 'Ubuntu', sans-serif;
+    min-width: 660px;
 }
 
 div,img, i{
@@ -151,5 +152,8 @@ div,img, i{
         float : none;
         width : 100%; 
         margin-top : 5%;
+    }
+    .landingpage-right img{
+        width : 100%;
     }
 }
