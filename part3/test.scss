@@ -1,0 +1,151 @@
+@use '_reset.scss'; 
+
+$main-color : blue;
+$sub-color : red;
+$default-size : 16px;
+
+.background{
+    background-color: $main-color;
+    font-size : ($default-size - 2px); // 14px이 들어감
+}
+
+.box {
+    background-color: $main-color;
+    font-size : ($default-size + 2px); // 18px이 들어감 
+}
+
+.main{
+    h4{
+        text-align: center;
+    }
+
+    button {
+        color : $sub-color;
+    }
+}
+
+%btn{
+    width : 100px;
+    height : 100px;
+    padding : 20px;
+}
+
+.btn-green{
+    @extend %btn;
+    background-color: green;    
+}
+
+.btn-red{
+    @extend %btn;
+    background-color: red;
+}
+
+.btn-blue{
+    @extend %btn;
+    background-color: blue;
+}
+
+%div-template{
+    width : 200px;
+    height : 200px;
+    padding : 20px;
+}
+
+.div-red {
+    @extend %div-template;
+    background-color: red;
+}
+
+.div-blue{
+    @extend %div-template;
+    background-color: blue;
+}
+
+.div-green{
+    @extend %div-template;
+    background-color: green;
+}
+
+@mixin 폰트사이즈($폰트, $자간){
+    font-size : $폰트;
+    letter-spacing: $자간;
+}
+
+h1{
+    @include 폰트사이즈(40px, -1px); 
+}
+
+.list{
+    list-style: none;
+    width : 70%;
+    margin: auto;
+    
+    li {
+        border : 1px solid #eee;
+        padding : 20px;
+    }
+
+    li {
+        &:hover{
+            background-color: steelblue;
+            color : white;
+        }
+    }
+
+
+    li {
+        &:active{
+            background-color: skyblue;
+            color : white;
+        }
+    }
+}
+
+@mixin name($배경색깔, $글자색깔) {
+    width : 60%; 
+    padding : 10px;
+    background-color: $배경색깔;
+    margin : auto; 
+    color : $글자색깔;
+}
+
+.green{
+    @include name(green, white);
+}
+
+.skyblue{
+    @include name(skyblue, white);
+}
+
+.yellow{
+    @include name(yellow, black); 
+}
+
+.row{
+    .col-6{
+        float : left;
+        width : 50%;
+        border : 1px solid black; 
+        padding : 20px;
+        background-color: gray;
+        color : white; 
+    }
+    .col-6{
+        &::after{
+            clear: both;
+        }
+    }
+    .col-4{
+        float : left;
+        width : 33.3%; 
+        border : 1px solid black;
+        padding : 20px;
+        background-color: gray;
+        color : white; 
+    }
+    .col-4{
+        &::after{
+            clear: both;
+        }
+    }
+}

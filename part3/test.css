@@ -1,0 +1,131 @@
+body {
+  margin: 0px;
+}
+
+div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.background {
+  background-color: blue;
+  font-size: 14px;
+}
+
+.box {
+  background-color: blue;
+  font-size: 18px;
+}
+
+.main h4 {
+  text-align: center;
+}
+.main button {
+  color: red;
+}
+
+.btn-blue, .btn-red, .btn-green {
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+}
+
+.btn-green {
+  background-color: green;
+}
+
+.btn-red {
+  background-color: red;
+}
+
+.btn-blue {
+  background-color: blue;
+}
+
+.div-green, .div-blue, .div-red {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+}
+
+.div-red {
+  background-color: red;
+}
+
+.div-blue {
+  background-color: blue;
+}
+
+.div-green {
+  background-color: green;
+}
+
+h1 {
+  font-size: 40px;
+  letter-spacing: -1px;
+}
+
+.list {
+  list-style: none;
+  width: 70%;
+  margin: auto;
+}
+.list li {
+  border: 1px solid #eee;
+  padding: 20px;
+}
+.list li:hover {
+  background-color: steelblue;
+  color: white;
+}
+.list li:active {
+  background-color: skyblue;
+  color: white;
+}
+
+.green {
+  width: 60%;
+  padding: 10px;
+  background-color: green;
+  margin: auto;
+  color: white;
+}
+
+.skyblue {
+  width: 60%;
+  padding: 10px;
+  background-color: skyblue;
+  margin: auto;
+  color: white;
+}
+
+.yellow {
+  width: 60%;
+  padding: 10px;
+  background-color: yellow;
+  margin: auto;
+  color: black;
+}
+
+.row .col-6 {
+  float: left;
+  width: 50%;
+  border: 1px solid black;
+  padding: 20px;
+  background-color: gray;
+  color: white;
+}
+.row .col-6::after {
+  clear: both;
+}
+.row .col-4 {
+  float: left;
+  width: 33.3%;
+  border: 1px solid black;
+  padding: 20px;
+  background-color: gray;
+  color: white;
+}
+.row .col-4::after {
+  clear: both;
+}/*# sourceMappingURL=test.css.map */
