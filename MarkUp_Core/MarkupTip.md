@@ -134,6 +134,8 @@ class = "덩어리이름__역할--세부특징"
 
 요즘은, React/Vue 를 사용하여 컴포넌트별로 CSS를 작성하기 때문에 OOCSS, BEM을 사용하지 않아도 괜찮음. 
 
+---
+
 # CSS 덮어쓰기
 급할때 `!important`
 ```
@@ -141,3 +143,57 @@ class = "덩어리이름__역할--세부특징"
   color : green !important; 
 }
 ```
+---
+
+
+# Pseudo-Element
+
+* `: Pseudo-Class` </br>
+: 다른 상태 일 때
+  
+
+* `:: Pseudo-element` </br>
+: 내부의 일부분만 스타일을 줄 때
+  
+
+* `::first-line` : 문장의 첫 부분만 스타일을 줄 때 사용하는 코드 
+
+```
+.pseudo::first-line{
+    color : red; 
+    font-size : 30px; 
+}
+```
+
+* `::after` : 맨 뒤에 집어넣고 싶은 것 (`<-> ::before`)
+```
+.pseudo::after{
+    content : '안녕'; 
+    color : red;
+    font-size : 30px; 
+}
+```
+
+* after pseudo element를 활용하여 `float : left` 한것에 대한 `clear : both` 에 대해서 해결하기
+
+![image](https://user-images.githubusercontent.com/63600953/136306870-286a6288-8dac-42ea-9850-cb2af99eff89.png)
+
+
+* `<input>` 태그에서 type을 file을 사용하면 자동으로 input button이 생성된다. 
+
+=> `::file-selector-button`
+
+![image](https://user-images.githubusercontent.com/63600953/136307939-956ac813-167b-4c48-a04d-5359aa8d1b74.png)
+
+```
+.custom-btn::file-selector-button {
+    background-color: skyblue;
+    padding : 20px; 
+    color : white;
+}
+
+.custom-btn::file-selector-button:hover{
+    background-color: aquamarine;
+}
+```
+
