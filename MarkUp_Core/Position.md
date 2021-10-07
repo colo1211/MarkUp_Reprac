@@ -60,8 +60,22 @@ Tip! position : absolute 가운데 정렬하는 방법
     width : 적절한 px;
 ```
 
-### z-index
+### 5. position : sticky
 
+* `position : fixed` 와 상당히 유사
+  
+
+* fixed : viewport 에 고정
+* sticky : 조건부 fixed, 부모 박스 넘어가면 해제 </br> 
+
+````
+position : sticky을 사용하기 위한 속성
+1. position : sticky 
+2. 위치, `top : 0px;` (부모 요소로 부터 몇 픽셀에 고정해서 위치해 있을 것인지?)
+````
+
+### z-index
+ 
 * position 을 쓰게 되면 붕 뜬다. 여러 개가 겹쳤을 때, 사용 할 수 있는 속성
 * 여러 개가 동시에 붕 띄웠을 때, 어떤 것을 더 위에 보여줄 것인가? 
 
