@@ -1,5 +1,8 @@
 # Animation
 
+## 1. One Way Animation
+a에서 b로 이동하는 one way animation은 그냥 transition을 쓰면 된다. 
+
 ### 방법
 1. 시작 스타일 제작
 2. 최종 스타일 제작
@@ -120,3 +123,103 @@ css
 
 
 4. transition 
+
+
+---
+
+## 2. @keyframes animation
+
+* `a -> b -> c`
+* `a -> b -> a`
+* `a -> 1초 정지 -> b`
+
+위와 같은 애니메이션은 `@keyframes`를 활용하여 애니메이션을 제작한다. 
+
+애니메이션을 제작할 때 사용하는 속성들
+1. 회전 </br>
+   `transform : rotate(10deg)`
+
+
+2. 이동 </br>
+    `transform : translateX(100px);`
+    * x축으로 100px만큼 이동시킨다.
+    * 애니메이션 만들 때, margin 속성을 이용하는 것보다 훨씬 부드럽게 동작한다. 
+    
+
+3. 확대/축소(스케일링) </br>
+    `transform : scale(0.5);`
+   
+
+4. 애니 동작 마지막에서 멈추고 싶다면 </br>
+    `animation-fill-mode : forwards`
+
+keyframe 예제) 
+
+```
+.ani-text {
+    text-align: center;
+}
+
+.ani-text:hover{
+    animation-name : 애니; /* 정의한 애니메이션 이름 */
+    animation-duration: 1s; /* 1초동안 실행 */
+    animation-iteration-count: 3; /* 3번 반복 */
+}
+
+@keyframes 애니 {
+/*    초기상태*/
+    0%{
+        transform: translateX(0px);
+    }
+    
+    25%{
+        transform: translateX(-100px);
+    }
+    
+    75%{
+        transform: translateX(100px);
+    }
+    
+/*    최종상태*/
+    100%{
+        transform: translateX(0px);
+    }
+}
+```
+Tip! 
+만약에 하나의 %(진행 정도)에 여러가지 transform 을 주고 싶다면? 
+아래와 같이 transform 을 두개로 나누지 말고 바로 옆에다가 속성을 작성해야 잘 동작한다. 
+```
+@keyframes plustoX{
+    25%{
+        transform: rotate(-10deg); 
+    }
+    
+    100%{
+        transform : rotate(45deg) scale(1.5);
+        /*transform : scale(1.5); 이러면 작동 제대로 안됨*/
+    }
+}
+```
+
+</br></br>
+#### 왜 transform 속성을 사용하여 ani를 구현해야 하는거지? 
+
+: 브라우저의 렌더링 순서 때문, 애니메이션을 margin으로 처리하면 2번부터 다시 처리해야하지만, 
+tranform 속성을 활용하면 4번, 마지막 단계를 1번만 거치면 된다. 
+
+
+1. Render Tree 생성 
+   
+
+2. LayOut 잡기</br> 
+   ex) width , height, margin, padding
+
+
+3. Paint (색칠) 하기 
+
+
+4. Composite 처리</br> 
+   ex) transform, opacity 
+   
+
