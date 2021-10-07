@@ -262,13 +262,28 @@ div, input, textarea, button{
     color : white;
 }
 
+input[type=file]::-webkit-file-upload-button{
+    background-color: red;
+    border: none;
+}
+
+/*
 .custom-btn::file-selector-button {
     background-color: skyblue;
     padding : 20px; 
     color : white;
 }
+*/
 
 .custom-btn::file-selector-button:hover{
     background-color: aquamarine;
 }
 
+input[type=text]::-webkit-input-placeholder{
+    text-align: center;
+}
+
+input[type=range]::-webkit-slider-thumb{
+    appearace : none;
+    background-color: black;
+}
