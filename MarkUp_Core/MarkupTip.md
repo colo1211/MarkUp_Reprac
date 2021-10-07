@@ -197,3 +197,27 @@ class = "덩어리이름__역할--세부특징"
 }
 ```
 
+* Pseudo-class
+
+
+
+![image](https://user-images.githubusercontent.com/63600953/136309195-ec97c478-e1ab-4101-bcde-3dcf8c29b941.png)
+
+file input을 하나 만들면 `<button>`과 `<span>` 이 동시에 생성된다.  
+
+이를 크롬 개발자 도구에서 `Shadow DOM`을 활용하여 확인 가능하다.
+
+
+이렇게도 변경 가능
+```
+input[type=file]::-webkit-file-upload-button{
+    background-color: red;
+    border: none;
+}
+```
+
+* -webkit- : 크롬, 사파리, Edge에서 적용되는 스타일 
+* -moz- : FireFox에서 사용 
+
+따라서, 브라우저마다 Shadow Dom이 살짝씩 다르다. 
+
