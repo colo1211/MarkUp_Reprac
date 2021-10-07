@@ -65,6 +65,26 @@ div, input, textarea, button{
     width : 150px;
 }
 
+.main-btn:hover{
+    animation-name : shake-ani;
+    animation-duration: 0.5s;
+}
+
+@keyframes shake-ani {
+    0%{
+        transform: rotate(0deg); 
+    }
+    25%{
+        transform: rotate(-10deg); 
+    }
+    75%{
+        transform: rotate(10deg); 
+    }
+    100%{
+        transform: rotate(0deg); 
+    }
+}
+
 .explain-box {
     position : relative;
     background-color: #eee;
@@ -287,3 +307,108 @@ input[type=range]::-webkit-slider-thumb{
     appearace : none;
     background-color: black;
 }
+
+.ani-text {
+    text-align: center;
+}
+
+.ani-text:hover{
+    animation-name : 애니;
+    animation-duration: 1s;
+    animation-iteration-count: 3; 
+/*    3번 반복*/
+}
+
+@keyframes 애니 {
+/*    초기상태*/
+    0%{
+        transform: translateX(0px);
+    }
+    
+    25%{
+        transform: translateX(-100px);
+    }
+    
+    75%{
+        transform: translateX(100px);
+    }
+    
+/*    최종상태*/
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+.plus-rotate {
+    text-align: center;
+    font-size: 50px;
+}
+
+.plus-rotate:hover{
+    animation-name : plustoX;
+    animation-duration : 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes plustoX{
+    25%{
+        transform: rotate(-10deg); 
+    }
+    
+    100%{
+        transform : rotate(45deg) scale(1.5);
+    }
+}
+
+.side-menu{
+    position: fixed;
+    width : 30%;
+    height : 100vh;
+    background-color: rgba(0,0,0,0.8);
+    color : white;
+    z-index: 5;
+    padding : 50px 10px 0px 10px;
+    transform: translateX(-55%);
+    transition: all 0.3s;
+    text-align: right;
+}
+
+
+
+.side-menu h1{
+    text-align: right;
+}
+
+.side-menu p{
+    text-align: left;
+}
+
+.side-menu:hover{
+    transform: translateX(0%);
+}
+
+.side-menu:hover h1{
+    text-align: center;
+}
+
+
+/* 왼쪽 정렬 되어있는 글씨를 가운데로 정렬하기 위한 keyframe animation*/
+@keyframes slide {
+  0% { 
+      transform: translateX(-250px);
+    }
+  50% { 
+      transform: translateX(50px) skewX(-10deg);
+    }
+  100% { 
+      transform: translateX(0px);
+    }
+}
+
+.side-menu:hover p{
+    animation-name: slide;
+    animation-duration: 1s;
+} 
+
+
+/*skewX(-10deg) : 나오면서 -10deg 정도 살짝 비틀거리면서 나옴*/
