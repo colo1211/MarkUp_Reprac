@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin page</title>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./AdminPage.css">
+<!--        Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+<!--        Fonts-awesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!--        google fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap" rel="stylesheet">
+<!--        Canvas-->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <div class='side-bar '>
+            <div class="icon-box">
+                <p style='display: inline-block'>Home</p>
+                <i class="fas fa-home"></i>
+            </div>
+            <div class="icon-box">
+               <p style='display: inline-block'>Service</p>
+                <i class="fas fa-headphones"></i>
+            </div>
+            <div class="icon-box">
+               <p style='display: inline-block'>Alerts</p>
+                <i class="fas fa-flag"></i>
+            </div>
+            <div class="icon-box">
+                <p style='display: inline-block'>Charts</p>
+                <i class="fas fa-chart-pie"></i>
+            </div>
+        </div>
+        
+        <div class='main-container'>
+<!--            Navbar-->
+            <div class='navbar flex-box'>
+               <div class='flex-items'>
+                    <form class="d-flex">
+                      <input class="form-control search-box" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                   </form>
+               </div>
+               <div class="flex-box" style='flex-grow: 1'></div>
+               <div class="flex-box"><i class="fas fa-bell"></i></div>
+               <div class="flex-box"><i class="fas fa-envelope"></i></div>
+               <div class="flex-box">Kyung Won Kim</div>
+            </div>
+            
+<!--             main dashboard -->
+           <div class="dashboard">
+               <h2>DashBoard</h2>
+               <div class="card-wrap row">
+                  
+                   <div class="card-items col-lg-3 px-4">
+                       <div class='card-item row' style='border-left : 3px solid skyblue;'>
+                           <div class="col-8">
+                               <h5>Earnings(Monthly)</h5>
+                               <p>$400,000</p>
+                           </div>
+                            <div class="col-4 text-center">
+                               <i class="fas fa-suitcase"></i>
+                          </div>
+                       </div>
+                   </div>
+                   <div class="card-items col-lg-3 px-4">
+                       <div class='card-item row' style='border-left : 3px solid green;'>
+                         <div class='col-8'>
+                               <h5>Earnings(Monthly)</h5>
+                               <p>$400,000</p>
+                        </div>
+                        <div class="col-4 text-center">
+                               <i class="fas fa-dollar-sign"></i>
+                        </div>
+                       </div>
+                   </div>
+                   <div class="card-items col-lg-3 px-4">
+                       <div class='card-item row' style='border-left : 3px solid darkblue;'>
+                           <div class="col-8">
+                               <h5>Earnings(Monthly)</h5>
+                               <p>$400,000</p>
+                          </div>
+                           <div class="col-4 text-center">
+                               <i class="fas fa-tasks"></i>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="card-items col-lg-3 px-4">
+                       <div class='card-item row' style='border-left : 3px solid yellow;'>
+                           <div class="col-8">
+                               <h5>Earnings(Monthly)</h5>
+                               <p>$400,000</p>
+                           </div>
+                           <div class="col-4 text-center">
+                               <i class="fab fa-stack-overflow"></i>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               
+<!--               Canvas/Tasks-->
+               <div class='mt-5 row'>
+                   <div class='canvas-wrap col-lg-7'>
+                      <strong>Earning OverViews</strong>
+                       <canvas id="myChart"></canvas>
+                   </div>
+                   
+                   <div class="tasks col-lg-5">
+                       <ul class="task-wrap">
+                           <li style='background-color: #f6f6f6;'><strong>Tasks</strong></li>
+                           <li>Borrowed Items <div class='count-box'>14</div></li>
+                           <li>Trello requests<div class='count-box'>2</div></li>
+                           <li>Marked Comments<div class='count-box'>1</div></li>
+                       </ul>
+                   </div>
+               </div>
+
+            <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    datasets: [{
+                        label: '# of Votes',
+                        data: [12, 19, 3, 5, 2, 3],
+                        backgroundColor: 'white',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+            </script>
+               
+           </div>
+            
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    </body>
+</html>
