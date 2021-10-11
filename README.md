@@ -82,7 +82,7 @@
 ![127 0 0 1_63577_part3_AdminPage html (3)](https://user-images.githubusercontent.com/63600953/136647962-42d82b5a-6dd0-498a-b4c1-70a85e43daeb.png)
 
 * Side Bar 애니메이션 </br> 
-: side bar에 hover하게 되면 아이콘에 맞는 글씨들이 정렬되도록 애니메이션을 설정 
+: side bar에 hover(마우스를 사이드바에 올림) 하게 되면 아이콘에 맞는 글씨들이 정렬되도록 애니메이션을 설정 
   * 모두 `transform : translateX( px);` 로 해결
 
 ![image](https://user-images.githubusercontent.com/63600953/136648043-2e101f05-f466-44a1-99d9-af62e9923a79.png)
